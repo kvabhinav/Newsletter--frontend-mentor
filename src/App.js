@@ -5,7 +5,7 @@ import Success from './pages/Success'
 
 function App() {
   return (
-    <div className="bg-charcolGrey w-full h-screen flex justify-center items-center">
+    <div className="sm:bg-white lg:bg-charcolGrey w-screen h-screen lg:flex lg:justify-center lg:items-center">
       <Routes>
         <Route  path="/" element={<Home />} ></Route>
         <Route path="/success" element={<Success />} ></Route>

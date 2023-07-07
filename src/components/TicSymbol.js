@@ -7,8 +7,8 @@ export default function TicSymbol() {
             {
                 points.map((data) => {
                     return (
-                        <div className='flex items-center my-2'>
-                            <div className="w-5 h-5 bg-tomato rounded-full flex justify-center items-center">
+                        <div className='flex items-start lg:items-center my-2 lg:mb-4'>
+                            <div className="mt-1 lg:mt-0 w-5 h-5 bg-tomato rounded-full flex justify-center lg:items-center">
                                 <img src={iconlist} alt="tic symbol"></img>
                             </div>
                             <h2 className='mx-2'>{data}</h2>
