@@ -12,9 +12,9 @@ export default function ContentBox() {
             <div className='grid grid-rows-2 gap-3 place-items-center'>
                 <div>
                     <h3 className='text-darkSlateGrey font-bold'>Email address</h3>
-                    <input type="text" className='w-80 lg:w-96 h-12 text-center border-2 rounded-lg  border-grey ' name="email" placeholder='email@company.com' onChange={(e) => setEmail(e.target.value)} value={email}></input>
+                    <input type="text" className='w-80 lg:w-96 h-12 text-left pl-4 border-2 rounded-lg  border-grey ' name="email" placeholder='email@company.com' onChange={(e) => setEmail(e.target.value)} value={email}></input>
                 </div>
-                <button className='text-white bg-darkSlateGrey  w-80  lg:w-full h-14 text-center rounded-lg'>Subscribe to monthly newsletter</button>
+                <button className='text-white bg-darkSlateGrey hover:bg-gradient-to-r from-pink-500 to-tomato   w-80  lg:w-full h-14 text-center rounded-lg'>Subscribe to monthly newsletter</button>
             </div>
 
         </div>
