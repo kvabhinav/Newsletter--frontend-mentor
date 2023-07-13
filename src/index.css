@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
 
-@layer base {
-    *{
-        margin: 0px;
+
+@layer components {
+
+    .input{
+        @apply w-80 lg:w-96 h-12 text-left pl-4 border-2 rounded-lg border-grey
     }
-} */
+
+    .error{
+        @apply w-80 lg:w-96 h-12 text-left pl-4 border-2 rounded-lg border-tomato bg-tomato/10 placeholder-tomato text-red-500
+    }
+
+    input:invalid{
+        @apply error
+    }
+}
 
 @import url('https://fonts.google.com/specimen/Roboto')

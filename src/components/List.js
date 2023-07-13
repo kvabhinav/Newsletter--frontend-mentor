@@ -1,6 +1,6 @@
 import iconlist from '../images/iconlist.svg'
 
-export default function TicSymbol() {
+export default function List() {
     const points = ["Product discovery and build what matters", "Measuring to ensure updates are a success ", "And much more!"]
     return (
         <div className='mt-4 mb-6 font-Roboto'>
