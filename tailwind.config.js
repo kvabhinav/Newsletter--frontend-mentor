@@ -3,9 +3,6 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      fontFamily: {
-        Roboto: ['400', '700']
-      },
       colors: {
         tomato: '#FF6257',
         darkSlateGrey: '#242742',
