@@ -1,11 +1,12 @@
 import { useState,useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 import List from './List'
 
 export default function ContentBox() {
 
     const [text,setText] =useState('')
     const [email, setEmail] = useState('')
+    const navigate = useNavigate()
 
     const mailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -18,6 +19,14 @@ export default function ContentBox() {
             setText('')
         }
     },[email])
+
+    const clickHandle=()=>{
+        if(mailFormat.test(email)){
+            navigate('/success',{state:{email:email}})
+        }else {
+            setText("Valid email required")
+        }
+    }
 
 
     return (
@@ -33,7 +42,7 @@ export default function ContentBox() {
                     </div>
                     <input type="text" className='input' name="email" placeholder='email@company.com' onChange={(e)=>setEmail(e.target.value)} value={email} pattern='^[^\s@]+@[^\s@]+\.[^\s@]+$' ></input>
                 </div>
-                <button className='text-white bg-darkSlateGrey hover:bg-gradient-to-r from-pink-500 to-tomato   w-80  lg:w-full h-14 text-center rounded-lg' onInvalid={()=>console.log('invalid')}>Subscribe to monthly newsletter</button>
+                <button className='text-white bg-darkSlateGrey hover:bg-gradient-to-r from-pink-500 to-tomato   w-80  lg:w-full h-14 text-center rounded-lg' onClick={clickHandle}>Subscribe to monthly newsletter</button>
             </div>
 
         </div>
